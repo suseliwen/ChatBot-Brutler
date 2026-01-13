@@ -2,6 +2,7 @@ from pydantic_ai.agent import AgentRunResult
 from pydantic_ai import Agent
 from dotenv import load_dotenv
 
+
 load_dotenv()
 
 class BruttlerBot:
@@ -20,7 +21,7 @@ class BruttlerBot:
 
     def chat (self, prompt: str) -> AgentRunResult:
         message_history = self.result.all_messages() if self.result else None
-        self.result = self.chat_agent_run_sync(prompt, message_history = message_history)
+        self.result = self.chat_agent.run_sync(prompt, message_history = message_history)
 
         return {"user": prompt, "bot": self.result.output}
     

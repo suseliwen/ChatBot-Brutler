@@ -42,6 +42,8 @@ def layout():
     display_chat_messages()
     handle_user_input()
 
+    #tester
+
 
 if __name__ == "__main__":
     init_session_states()

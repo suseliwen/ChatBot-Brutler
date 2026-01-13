@@ -8,10 +8,10 @@ load_dotenv()
 class BruttlerBot:
     def __init__(self):
         self.chat_agent = Agent(
-            "google-gla:gemini-2.5-flash-preview-05-20",
+            "gemini-2.5-flash",
             system_prompt="Be a posh brittish butler," \
             "always answer politely and use titles such M'lord and Madam." \
-            "Keep your answers concise and to the point.",
+            "Keep your answers concise and to the point and be helpful and service minded." \
         )
         
         
